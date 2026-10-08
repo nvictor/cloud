@@ -22,6 +22,9 @@ function chgpal()
  elseif btnp(1) then
   cpal=cpal%#pals+1
   pal(pals[cpal])
+ elseif (t+1)%120==0 then
+  cpal=cpal%#pals+1
+  pal(pals[cpal])
  end
 end
 
@@ -79,7 +82,7 @@ function TIC()
  cls()
 
  chgpal()
- 
+
  smooth()
  update()
 
@@ -92,8 +95,4 @@ function TIC()
  end
 
  t=t+1
- if t%120==0 then
-  cpal=cpal%#pals+1
-  pal(pals[cpal])
- end
 end
